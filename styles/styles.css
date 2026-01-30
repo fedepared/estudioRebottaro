@@ -1,0 +1,216 @@
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+:root {
+    --primary-green: #00632C;
+    --accent-gold: #C5A059;
+    --accent-gold-hover: #b08d4b;
+    --bs-primary: #00632C;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cinzel', Georgia, 'Times New Roman', serif;
+    color: #333;
+    line-height: 1.6;
+    font-weight: 400;
+} 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-font {
+    font-family: 'Cinzel', Georgia, 'Times New Roman', serif;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-variant: small-caps;
+    -webkit-font-smoothing: antialiased;
+}
+
+.navbar-custom {
+    background-color: var(--primary-green);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: var(--accent-gold) !important;
+    font-weight: 500;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #fff !important;
+}
+
+/* Active nav link styling for ScrollSpy */
+.navbar-custom .nav-link.active {
+    color: #fff !important;
+    font-weight: 600;
+    position: relative;
+}
+
+.navbar-custom .nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -6px;
+    height: 3px;
+    width: 40%;
+    background-color: var(--accent-gold);
+    border-radius: 2px;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 99, 44, 0.75), rgba(0, 99, 44, 0.6)), url("../assets/consorcio.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    margin-bottom: 0;
+}
+
+.btn-primary {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+.btn-primary:hover {
+    background-color: #004d23;
+    border-color: #004d23;
+}
+
+.btn-gold {
+    background-color: var(--accent-gold);
+    color: #fff;
+    border: none;
+}
+
+.btn-gold:hover {
+    background-color: var(--accent-gold-hover);
+    color: #fff;
+}
+
+.btn-outline-gold {
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+}
+
+.btn-outline-gold:hover {
+    background-color: var(--accent-gold);
+    color: #fff;
+}
+
+.service-card {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.icon-box {
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+}
+
+.text-gold {
+    color: var(--accent-gold) !important;
+}
+
+.text-green {
+    color: var(--primary-green) !important;
+}
+
+.form-control:focus {
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 0 0.25rem rgba(197, 160, 89, 0.25);
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 110px;
+    right: 30px;
+    width: 55px;
+    height: 55px;
+    background-color: #25d366;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 0 2px var(--accent-gold);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+.whatsapp-float svg {
+    width: 32px;
+    height: 32px;
+    fill: white;
+}
+
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 52px;
+    height: 52px;
+    background-color: var(--primary-green);
+    color: #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+    border: none;
+    cursor: pointer;
+    z-index: 1050;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top .material-symbols-outlined {
+    font-size: 20px;
+}
+
+.back-to-top:focus {
+    outline: 3px solid rgba(197,160,89,0.25);
+    outline-offset: 2px;
+}
+
+.back-to-top:hover {
+    background-color: var(--accent-gold);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
