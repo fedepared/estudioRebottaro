@@ -7,6 +7,8 @@
     --accent-gold: #C5A059;
     --accent-gold-hover: #b08d4b;
     --bs-primary: #00632C;
+    --animate-duration: 900ms;
+    --animate-delay: 0.9s;
 }
 
 html {
@@ -213,4 +215,107 @@ h6,
 
 .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
+
+/* Mobile adjustments: reduce margins, paddings and font sizes for small screens */
+@media (max-width: 576px) {
+    body {
+        font-size: 15px;
+        line-height: 1.45;
+    }
+
+    /* Hero */
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .lead {
+        font-size: 0.95rem;
+        max-width: 100%;
+    }
+
+    /* Buttons */
+    .btn-lg {
+        padding: 0.6rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    /* Cards */
+    .service-card {
+        padding: 1rem;
+    }
+
+    .service-card .card-title {
+        font-size: 1rem;
+    }
+
+    .icon-box .material-symbols-outlined {
+        font-size: 34px;
+    }
+
+    /* Navbar */
+    .navbar-brand img {
+        height: 40px;
+    }
+
+    .navbar-custom .nav-link {
+        font-size: 0.95rem;
+        padding: 0.35rem 0.5rem;
+    }
+
+    /* Floating buttons */
+    .whatsapp-float {
+        width: 46px;
+        height: 46px;
+        bottom: 90px;
+        right: 16px;
+    }
+
+    .whatsapp-float svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .back-to-top {
+        width: 44px;
+        height: 44px;
+        right: 16px;
+        bottom: 16px;
+    }
+
+    .back-to-top .material-symbols-outlined {
+        font-size: 18px;
+    }
+
+    /* Forms */
+    .form-control.form-control-lg {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.95rem;
+    }
+
+    /* Modal */
+    .modal-dialog.modal-lg {
+        max-width: 92%;
+    }
+
+    .modal-body {
+        font-size: 0.95rem;
+    }
+
+    .display-6 {
+        font-size: 1.25rem;
+    }
+
+
+}
+
+/* Agrega esto a tu hoja de estilos o etiqueta <style> */
+.invisible-init {
+    opacity: 0;
+    visibility: hidden; /* Evita que sea clickeable mientras no se ve */
+    transition: opacity 0.3s; /* Suavizado opcional */
 }
