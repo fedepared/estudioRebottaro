@@ -146,10 +146,10 @@ h6,
     right: 30px;
     width: 55px;
     height: 55px;
-    background-color: #25d366;
+    background-color: var(--primary-green);
     border-radius: 50px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 0 2px var(--accent-gold);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 0 2px white;
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -310,6 +310,10 @@ h6,
         font-size: 1.25rem;
     }
 
+    .last-card{
+        font-size: 0.9rem;
+    }
+
 
 }
 
@@ -318,4 +322,18 @@ h6,
     opacity: 0;
     visibility: hidden; /* Evita que sea clickeable mientras no se ve */
     transition: opacity 0.3s; /* Suavizado opcional */
+}
+
+.last-card{
+    font-size: 1.25rem;
+    /* box-shadow: [eje-x] [eje-y] [difuminado] [propagación] [color]; */
+    box-shadow: 0 4px 12px rgba(0, 99, 44, 0.25); 
+    border: 1px solid rgba(0, 99, 44, 0.1); /* Opcional: borde sutil */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.last-card:hover{
+    box-shadow: 0 10px 20px rgba(0, 99, 44, 0.4);
+    transform: translateY(-5px);
+
 }
