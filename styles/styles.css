@@ -269,20 +269,20 @@ h6,
 
     /* Floating buttons */
     .whatsapp-float {
-        width: 46px;
-        height: 46px;
+        width: 40px;
+        height: 40px;
         bottom: 90px;
         right: 16px;
     }
 
     .whatsapp-float svg {
-        width: 24px;
-        height: 24px;
+        width: 20px;
+        height: 20px;
     }
 
     .back-to-top {
-        width: 44px;
-        height: 44px;
+        width: 40px;
+        height: 40px;
         right: 16px;
         bottom: 16px;
     }
@@ -394,6 +394,10 @@ h6,
 .quote-end {
     bottom: -30px; /* Un poco más abajo para compensar la altura de línea */
     right: 20px;
+}
+
+.leaflet-marker-icon.leaflet-div-icon{
+    color:var(--bs-primary);
 }
 
 
