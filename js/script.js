@@ -239,3 +239,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // chequeo si ya esta scrolleado al cargar la pagina
   checkScroll();
 });
+
+
+   
