@@ -50,7 +50,8 @@
                 Laboral, respaldado por una extensa trayectoria en la representación y asesoramiento jurídico de
                 consorcios y en la gestión de sus relaciones laborales.
             </p>
-            <p class="fw-bold">Contacto directo con la administración y evacuación de consultas inmediatas vía WhatsApp.</p>
+            <p class="fw-bold">Contacto directo con la administración y evacuación de consultas inmediatas vía WhatsApp.
+            </p>
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
                 <a class="btn btn-gold btn-lg px-5 py-3 fw-bold" href="#contact">Consúltenos</a>
                 <a class="btn btn-outline-light btn-lg px-5 py-3 fw-bold" href="#services">Nuestras Áreas de
@@ -390,20 +391,55 @@
             </div>
         </div>
     </div>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 10000;">
+        <div id="statusToast" class="toast border-0 shadow-lg" role="alert" aria-live="assertive" aria-atomic="true"
+            data-bs-delay="6000">
+            <div class="toast-header text-white" style="background-color: #004d23;">
+                <span class="material-symbols-outlined me-2" style="color: #c5a059;" id="toastIcon">check_circle</span>
+                <strong class="me-auto" style="color: #c5a059; font-family: 'Cinzel', serif;">Estudio Rebottaro</strong>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+            <div class="toast-body bg-white text-dark" id="toastMessage">
+            </div>
+        </div>
+    </div>
     <script>
-        // Al cargar la página
-        window.onload = function () {
+        document.addEventListener('DOMContentLoaded', function () {
+            // 1. Detectar parámetros de la URL
             const urlParams = new URLSearchParams(window.location.search);
             const estado = urlParams.get('estado');
 
-            if (estado === 'exito') {
-                alert("¡Mensaje enviado con éxito! Nos pondremos en contacto a la brevedad.");
-                // Opcional: Limpiar la URL para que no salga el alert al recargar
-                window.history.replaceState({}, document.title, window.location.pathname);
-            } else if (estado === 'error') {
-                alert("Hubo un error al enviar el mensaje. Por favor intenta nuevamente o contáctanos por WhatsApp.");
+            // 2. Referencias a los elementos del Toast
+            const toastEl = document.getElementById('statusToast');
+            const toastMsg = document.getElementById('toastMessage');
+            const toastIcon = document.getElementById('toastIcon');
+
+            // Si existe un estado y el elemento Toast en el DOM
+            if (estado && toastEl) {
+                // Inicializar el Toast de Bootstrap
+                const toast = new bootstrap.Toast(toastEl);
+
+                if (estado === 'exito') {
+                    // ÉXITO
+                    toastIcon.textContent = 'check_circle';
+                    toastIcon.style.color = '#c5a059';
+                    toastMsg.innerHTML = '<strong>¡Consulta enviada!</strong><br>Gracias por contactarnos. Le responderemos a la brevedad.';
+                    toast.show();
+
+                } else if (estado === 'error') {
+                    // ERROR
+                    toastIcon.textContent = 'error';
+                    toastIcon.style.color = '#ff6b6b';
+                    toastMsg.innerHTML = '<strong>Hubo un problema.</strong><br>No se pudo enviar el mensaje. Por favor, intente por WhatsApp.';
+                    toast.show();
+                }
+
+                // 3. Limpiar la URL
+                const newUrl = window.location.pathname;
+                window.history.replaceState({}, document.title, newUrl);
             }
-        }
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
