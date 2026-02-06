@@ -269,20 +269,20 @@ h6,
 
     /* Floating buttons */
     .whatsapp-float {
-        width: 46px;
-        height: 46px;
+        width: 40px;
+        height: 40px;
         bottom: 90px;
         right: 16px;
     }
 
     .whatsapp-float svg {
-        width: 24px;
-        height: 24px;
+        width: 20px;
+        height: 20px;
     }
 
     .back-to-top {
-        width: 44px;
-        height: 44px;
+        width: 40px;
+        height: 40px;
         right: 16px;
         bottom: 16px;
     }
@@ -337,3 +337,67 @@ h6,
     transform: translateY(-5px);
 
 }
+
+
+
+/* ESTILOS DEL CONTENEDOR */
+.statement-card {
+    background-color: var(--brand-color, #00632c); /* Tu verde base */
+    border-radius: 15px;
+    box-shadow: 0 20px 40px -10px rgba(0, 99, 44, 0.4) !important; 
+}
+
+/* TIPOGRAFÍA Y COLORES */
+.display-font {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+    /* Ajuste de tamaño responsive si es necesario */
+    @media (max-width: 768px) {
+        font-size: 1.5rem;
+    }
+}
+
+.text-gold {
+    color: #c5a059;
+}
+
+.divider-gold {
+    height: 3px;
+    width: 60px;
+    background-color: #c5a059;
+    border-radius: 2px;
+}
+
+/* --- COMILLAS DECORATIVAS DE FONDO --- */
+
+/* Clase base compartida */
+.quote-bg-icon {
+    position: absolute;
+    font-family: 'Playfair Display', serif;
+    font-size: 10rem; /* Tamaño original muy grande */
+    font-size: 8rem; /* Un poco más sutil queda mejor con dos */
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.07); /* Ligeramente más visible */
+    pointer-events: none; /* Evita que interfieran con clicks */
+    user-select: none; /* Evita que se seleccionen como texto */
+}
+
+/* Posición de apertura: Arriba Izquierda */
+.quote-start {
+    top: -10px;
+    left: 20px;
+}
+
+/* Posición de cierre: Abajo Derecha */
+.quote-end {
+    bottom: -30px; /* Un poco más abajo para compensar la altura de línea */
+    right: 20px;
+}
+
+.leaflet-marker-icon.leaflet-div-icon{
+    color:var(--bs-primary);
+}
+
+
